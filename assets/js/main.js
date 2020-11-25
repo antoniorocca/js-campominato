@@ -27,7 +27,7 @@ function inArray(array, number) {
 
 var numeriUtente = [];
 
-for (var i=0; i< 5; i++) {
+for (var i=0; i< 84; i++) {
   var numeroUtente = Number(prompt("Inserisci un numero tra 1 e 100"));
   if(inArray(numeriPc, numeroUtente)) {
     console.log("Game over!");
@@ -68,7 +68,7 @@ function inArray(array, number) {
 
 var numeriUtente = [];
 
-for (var i=0; i< 5; i++) {
+for (var i=0; i< 64; i++) {
   var numeroUtente = Number(prompt("Inserisci un numero tra 1 e 80"));
   if(inArray(numeriPc, numeroUtente)) {
     console.log("Game over!");
@@ -109,7 +109,7 @@ function inArray(array, number) {
 
 var numeriUtente = [];
 
-for (var i=0; i< 5; i++) {
+for (var i=0; i< 34; i++) {
   var numeroUtente = Number(prompt("Inserisci un numero tra 1 e 50"));
   if(inArray(numeriPc, numeroUtente)) {
     console.log("Game over!");
