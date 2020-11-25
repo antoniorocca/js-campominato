@@ -1,18 +1,16 @@
 var sceltaLivello = Number(prompt("Segli la difficoltà tra 0, 1 e 2"));
-
-if (sceltaLivello == "0") {
-
- function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max-min) + 1) + min;
-  }
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max-min) + 1) + min;
+}
 var numeriPc = [];
-while (numeriPc.length < 16) {
-  var number = getRandomNumber(1, 100);
+var numeriUtente = [];
+if (sceltaLivello == "0") {
+ while (numeriPc.length < 16) {
+   number = getRandomNumber(1, 100);
   if (! inArray(numeriPc, number)) {
     numeriPc.push(number);
   }
 }
-
 console.log(numeriPc, numeriPc.length);
 
 function inArray(array, number) {
@@ -24,10 +22,7 @@ function inArray(array, number) {
     i++;
   }
 }
-
-var numeriUtente = [];
-
-for (var i=0; i< 84; i++) {
+for (var i=0; i< 10; i++) {
   var numeroUtente = Number(prompt("Inserisci un numero tra 1 e 100"));
   if(inArray(numeriPc, numeroUtente)) {
     console.log("Game over!");
@@ -35,26 +30,21 @@ for (var i=0; i< 84; i++) {
   }
   while (inArray(numeriUtente, numeroUtente)) {
     alert("Hai già usato questo numero! Cambia il numero, premi ok e riprova!")
-    var numeroUtente = Number(prompt("Inserisci un numero tra 1 e 100"));
+    numeroUtente = Number(prompt("Inserisci un numero tra 1 e 100"));
   }
   numeriUtente.push(numeroUtente);
 }
-console.log(numeriUtente);
+ console.log(numeriUtente);
 
 console.log("Il tuo punteggio è di: " + numeriUtente.length);
 } else if (sceltaLivello == "1"){
-  function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max-min) + 1) + min;
-  }
-var numeriPc = [];
-while (numeriPc.length < 16) {
-  var number = getRandomNumber(1, 80);
-  if (! inArray(numeriPc, number)) {
-    numeriPc.push(number);
-  }
+   while (numeriPc.length < 16) {
+   var number = getRandomNumber(1, 80);
+   if (! inArray(numeriPc, number)) {
+   numeriPc.push(number);
+ }
 }
-
-console.log(numeriPc, numeriPc.length);
+ console.log(numeriPc, numeriPc.length);
 
 function inArray(array, number) {
   var i=0;
@@ -65,10 +55,7 @@ function inArray(array, number) {
     i++;
   }
 }
-
-var numeriUtente = [];
-
-for (var i=0; i< 64; i++) {
+for (var i=0; i< 10; i++) {
   var numeroUtente = Number(prompt("Inserisci un numero tra 1 e 80"));
   if(inArray(numeriPc, numeroUtente)) {
     console.log("Game over!");
@@ -80,22 +67,17 @@ for (var i=0; i< 64; i++) {
   }
   numeriUtente.push(numeroUtente);
 }
-console.log(numeriUtente);
+ console.log(numeriUtente);
 
-console.log("Il tuo punteggio è di: " + numeriUtente.length);
+ console.log("Il tuo punteggio è di: " + numeriUtente.length);
 } else if (sceltaLivello == 2){
-  function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max-min) + 1) + min;
-  }
-var numeriPc = [];
-while (numeriPc.length < 16) {
-  var number = getRandomNumber(1, 50);
-  if (! inArray(numeriPc, number)) {
+   while (numeriPc.length < 16) {
+   var number = getRandomNumber(1, 50);
+   if (! inArray(numeriPc, number)) {
     numeriPc.push(number);
   }
 }
-
-console.log(numeriPc, numeriPc.length);
+ console.log(numeriPc, numeriPc.length);
 
 function inArray(array, number) {
   var i=0;
@@ -106,10 +88,7 @@ function inArray(array, number) {
     i++;
   }
 }
-
-var numeriUtente = [];
-
-for (var i=0; i< 34; i++) {
+for (var i=0; i< 10; i++) {
   var numeroUtente = Number(prompt("Inserisci un numero tra 1 e 50"));
   if(inArray(numeriPc, numeroUtente)) {
     console.log("Game over!");
@@ -121,7 +100,6 @@ for (var i=0; i< 34; i++) {
   }
   numeriUtente.push(numeroUtente);
 }
-console.log(numeriUtente);
-
+   console.log(numeriUtente);
 console.log("Il tuo punteggio è di: " + numeriUtente.length);
 }
